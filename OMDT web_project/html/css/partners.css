@@ -1,0 +1,92 @@
+ 
+        .partner{
+          font-size: 3em;
+          
+        }
+        .page8{
+                 font-size: 1em;
+                 background-color: white;
+                 width: 40%;
+                 margin: auto;
+
+          
+        }
+        .column00{
+          background-image: url("meeting.jpg");
+          background-size: 100% 100vh;
+          background-repeat: no-repeat;
+          padding-top: 50px;
+          text-align: center;
+          margin: 7px;
+        }
+        .column01{
+          background-image: url("iddy.jpg");
+          background-size: 100% 100vh;
+          background-repeat: no-repeat;
+          padding-top: 50px;
+          margin: 7px;
+        }
+            {
+               box-sizing: border-box;
+           }
+
+           body {
+             margin: 0;
+           }
+
+          
+           /* Create three equal columns that floats next to each other */
+           .column {
+               float: left;
+               width: 48%;
+              
+
+           }
+           .column img{
+             width: 100%;
+           }
+           .row{
+            margin: auto;
+            height: 50vh;
+           }
+
+           /* Clear floats after the columns */
+           .row:after {
+               content: "";
+               display: table;
+               clear: both;
+           }
+
+           /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+           @media screen and (max-width:700px) {
+               .column {
+                   width: 100%;
+               }
+           }
+          
+           .homebtn{
+              position: absolute;
+              top: 10px;
+              right: 5px;
+           }
+           
+           .btn{
+               background-color: ;
+           }
+           .btn:hover{
+            background-color: green;
+            color: white;
+           }
+           
+          #myVideo {
+              position: fixed;
+              right: 0;
+              bottom: 0;
+              min-width: 100%; 
+              min-height: 100%;
+              z-index: -1000;
+              overflow: hidden;
+              opacity: 0.5;
+              filter: alpha(opacity=50); /* For IE8 and earlier */
+
+          }

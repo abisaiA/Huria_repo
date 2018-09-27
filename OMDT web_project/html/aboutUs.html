@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	    <link rel="stylesheet" type="text/css" href="css/style.css"><!--linking to an external css file-->
+	    <style type="text/css">
+	    	
+	    	#logo{
+	    	  width: 130px;
+	    	  
+	    	}
+        .header {
+            background-color: #f1f1f1;
+              padding: 0px;
+              text-align: center;
+        }
+	       /* Style the top navigation bar */
+         .topnav {
+             overflow: hidden;
+             background-color: #808080;
+             width: 100%;
+             position: sticky;
+             position: -webkit-sticky;
+             top: 0;
+             z-index: 1;
+         }
+
+         /* Style the topnav links */
+         .topnav a {
+             float: left;
+             display: block;
+             color: #f2f2f2;
+             text-align: center;
+             padding: 14px 16px;
+             text-decoration: none;
+             font-size: 18px;
+              font-family: "Times New Roman", Times, serif;
+              margin: 7px;
+         }
+
+         /* Change color on hover */
+         .topnav a:hover {
+             background-color: #ddd;
+             color: black;
+         }
+         a.active {
+           background-color: #4CAF50;
+           color: white;
+         }
+        a.active:hover{
+         background-color: #4CAF50;
+         color: #fff;
+        }
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+	    	.container p{
+	    		font-family: "Times New Roman";
+	    		
+	    	}
+	    	.column {
+	    	    float: left;
+	    	    width: 50%;
+	    	    padding: 15px;
+	    	}
+	    	.column img{
+	    		width: 100%;
+	    		height: 100%;
+	    	}
+
+	    	/* Clear floats after the columns */
+	    	.row:after {
+	    	    content: "";
+	    	    display: table;
+	    	    clear: both;
+	    	}
+                .info{
+                  background-color: black;
+                  color: #fff;
+                  font-size: 32px;
+                }
+                .foot{
+                         background-color: #ccc;
+                       
+                }
+                .foot ul li{
+                  display: inline;
+                    
+                }
+                .foot ul li img{
+                  width: 120px;
+                  margin: 5px;
+                  opacity: 0.5;
+                }
+                .foot ul li img:hover{
+                  opacity: 5;
+                }
+                .end{
+                  background-color: black;
+                  color: #fff;
+                  text-align: center;
+                  margin: 0px;
+                }
+                .copyright{
+                  padding: 10px;
+                  font-size: 14px;
+                }
+                .container p{
+                  text-align: justify;
+                  font-size: 20px;
+                }
+                .obj{
+                  text-align: justify;
+                  font-size: 20px;
+                }
+
+                .container {
+                  margin-top: 50px;
+                  
+                }
+
+	    	/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	    	@media screen and (max-width:600px) {
+	    	    .column {
+	    	        width: 100%;
+	    	    }
+	    	}
+	    	
+       
+    
+	    </style>
+</head>
+<body>
+
+
+<div class="header">
+   <img src="logo/OMDTZ-logo.png" alt="OMDTZ-logo" class="OMDTZ-logo float-left" style ="width:95px;">
+    <p class="h1 nav justify-content-center" style = "margin-bottom: 5px; font-family:Lucida Consol;">OpenMap Development Tanzania</p><!--this is an example of inline css-->
+    <p class="h2 nav justify-content-center" style = "margin-bottom: 0px; font-family:Forte; font-size:25px;">"Community, Technology, Innovation"</p>
+
+</div>
+	
+<!============navigation bar===========>
+<div class="topnav" id="myTopnav">
+           <a  href="home.html">Home</a>
+           <a class="active" href="aboutUs.html">About US</a>
+           <a  href="project1.html">Projects</a>
+           <a href="training.html">Training, Workshop, Library</a>
+           <a href="Blogs.html">Blogs,News</a>
+           <a  href="Team.html">Team</a>
+           <a href="partners.html">Partner with us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+  
+</div>
+<!/============navigation bar===========>
+
+   <video autoplay muted loop id="myVideo">
+   	 <source src="video/Gif maps.mp4" type="video/mp4">
+   	 Your browser does not support HTML5 video.<!-- if the browser used to display this page doesn't support html5,this message will be displayed-->
+   </video>
+   <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="container"><!--container is the bootstrap defined class for setting the contents at the center leaving equal spaces from left and right-->
+     <h4>Who are we?</h4>
+     <p>Openstreetmap is a collaboration organization aiming of creating a free editable map of the world. The creation and growth of openstreetmap has been motivated by restraction on use or availability of map information across much of the world and the advent of inexpensive portable satellite navigation devices.</p>
+
+<p>A person may use a Map on a daily basis, whether when driving through the day, navigating public transportion or walking unfamiliar streets, and finally come to realize that map helps us to reach our destination in the most efficient way. As openstreetmap grow popularity, it will allows you to list your business location information. Once listed your business becomes visible and accessible. If your business has a strong online pressure interested customers will find it much easier to locate your business that will hopefully visit and probably the Map to find.</p>
+
+<p>Creating an inspiring outlook fuels a journey of discovery. Through grouping locations or by being  able to drill down further into a specific location,  mapping encourages further discovery and interaction, but this can only work to a person who is having a clear knowledge on Mapping and ability to read and understand the mapping languages.Therefore,  absence of mapping knowledge can be a cause of development backwardness.</p>
+
+<p>The mapping knowledge is very important and beneficial to Tanzanian community since it builds the development team. The mapping process always builds a common understanding and shared ownership of the plan, incorporating ideas insights from team member representing many functions involved in a succeful developmentprocess.</p>
+
+
+<p>Affimming that our organization will work  tirelessly in solidarity with progressive organizations in any country in the world to achieve community, social, and economic responsibility among Tanzanians, we do firmly and solemnly resolve to provide for ourselves a consistitution of the above named Non-profit and Non-political organization and governed by the prevision therein.</p>
+
+<p>The non-governmental organization to be known as OPENMAP DEVELOPMENT TANZANIA shall be a non profit, non partisan, autonomous organization which shall be organized locally at both grassroots and national levels.
+</p>
+     <h4>What do we do</h4>
+     <p>
+     	<div class="row">
+     	  <div class="column  info">
+     	    <h1>Geospatial Data Collection</h1>
+     	    <p>Geospatial collects infrastructure data, processes the data and digitally stores and securely maintains this data for easy access by authorized users of our clients. OMDTZl has developed the ultimate in infrastructure mapping software with Opens Source Software and application. Field data can be easily imported and exported to in different file Format. </p>
+     	  </div>
+     	  <div class="column image">
+     	    
+     	    <img src="picha/odk.jpg">
+     	  </div>
+     	</div>
+     </p>
+     <p>
+     	<div class="row">
+     	  <div class="column">
+     	   
+     	    <img src="picha/disc.jpg">
+     	  </div>
+     	  <div class="column info">
+     	    <h2>Data analysis and visualization</h2>
+     	    <p>With data now being a critical source of competitive advantage, organisations are constantly seeking, newer methods to identify, managing and analyze the data they generate. At open map development Tanzania we have well trained personnel that can work with the data that is collected from all over Tanzania and outside in analysing the best places that the available resources can be allocated to basing on different criteria. Data analyst at OMDTZ use advance.</p>
+     	  </div>
+     	</div>
+     </p>
+     <p>
+     	<div class="row">
+     	  <div class="column  info">
+     	    <h2>Capacity building.</h2>
+     	    <p>One major role of Open map development Tanzania is Capacity Building to local government official, local people, non government organizations and students in data based decision. In order to achieve that, OMDTZ conduct trainings, workshops and events whereby people from different   professional background empowered in Geospatial Data from collection to visualization.</p>
+     	  </div>
+     	  <div class="column image">
+     	    
+     	    <img src="picha/me.jpg">
+     	  </div>
+     	</div>
+     </p>
+     <h4>Mission</h4>
+     <p>Organization's mission is to have a vibrant Tanzania community which is united, organized, growing to assist, and get involved in national and global developmentgoals via maps.</p>
+     <h4>Vision</h4>
+     <p>  Organizaton envision for Open Data, Open Source, and applyng these principles to assist organizations and individuals locally, and internationally to manage and solve social, economic and community challenges.</p>
+     <h4>Objectives</h4>
+     <p>The objectives for which organization is established are to:<ol class="obj">
+     	<li>To rise awareness of the community on the mapping and maps throughout Tanzania.</li>
+     	<li>To enable training and capacity building that will enable individuals and organizations to manage social, economic and community challenges.</li>
+     	<li>To enable creation of opportunities for members of the community to engage in global sustainable development initiatives.</li>
+     	<li>To promote innovations from community members that will provide solutions to challenges in their communities for social and economic developments.</li>
+     	<li>Take part and facilitate mapping initiatives in the community, Africa and the global community.</li>
+     	<li>Provide community with education on Open Street Map and Open Data.</li>
+     	<li>Empower community in cartographic tools and skills to business, universities, government agencies and different organization.</li>
+     </ol></p>
+   </div>
+
+   <footer class="foot">
+   	  <ul>
+   	  	<li><a href="https://www.hotosm.org"><img src="logo/HOTlogo.png"></a></li>
+   	  	<li><a href="https://www.redcross.org"><img src="logo/red.png" ></a></li>
+   	  	<li><a href="https://www.udsm.ac.tz"><img src="logo/UDSMlogo.png"></a></li>
+   	  	<li><a href="https://opendata.go.tz"><img src="logo/todi.png"></a></li>
+   	  	<li><a href="https://www.worldbank.org"><img src="logo/World_Bank_Group_logo.png"></a></li>
+   	  	<li><a href="https://www.ifrc.org"><img src="logo/DanishRedCrossLogo-e1477391823548.png"></a></li>
+   	  	<li><a href="https://www.darcity.net"><img src="logo/DarCityLogo.png"></a></li>
+   	  	<li><a href="https://www.ifrc.org"><img src="logo/red-cross-logotz.png"></a>
+   	  	<li><a href="https://www.aru.ac.tz/"><img src="logo/Ardhi_university_Logo.png"></a></li>	
+   	  	</li>
+   	  </ul>
+   </footer>
+   <div class="end">
+   	<p class="copyright">Copyright©<strong>OMDTZ</strong>.com 2018 </p>
+   </div>
+   <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.hdng{position:absolute;left:200px; top:15px;color:black;font-size:3em;}
+li{list-style-type:none; margin:5px;padding:5px;}
+section{position:absolute;top:300px;}
+.sidebar{background-color:white;width:200px;height:450px;}
+
+.leftbar{position:absolute;right:0px;background-color:white;width:200px;height:450px;top:160px;height:450px;top:150px;}
+.news{position:absolute; top:200px;}
+.advertisements{position:absolute; top:25px;}
+.home{position:absolute;top:10px;right:10px;}
+#myVideo{
+position:fixed;
+right:0;
+bottom:0;
+min-width:100%;
+max-height:100%;
+overflow:hidden;
+opacity:0.2;
+filter:alpha(opacity=50);
+z-index:-1000;
+}
+.nav{background-color:#F8F9FA;}
+

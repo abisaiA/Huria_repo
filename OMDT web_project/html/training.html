@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-10">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <style>
+  * {
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: Arial;
+     
+      background: #f1f1f1;
+      margin: 0;
+      font-size: 20px;
+  }
+
+ 
+  .header {
+      background-color: #f1f1f1;
+        padding: 0px;
+        text-align: center;
+  }
+   #myVideo {
+       position: fixed;
+       right: 0;
+       bottom: 0;
+       min-width: 100%; 
+       min-height: 100%;
+       z-index: -1000;
+       overflow: hidden;
+       opacity: 0.2;
+       filter: alpha(opacity=50); /* For IE8 and earlier */
+
+   }
+  
+
+  /* Style the top navigation bar */
+  .topnav {
+      overflow: hidden;
+      background-color: #808080;
+      width: 100%;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 1;
+  }
+
+  /* Style the topnav links */
+  .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+       font-family: "Times New Roman", Times, serif;
+       margin: 7px;
+  }
+
+  /* Change color on hover */
+  .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+  }
+  a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+ a.active:hover{
+  background-color: #4CAF50;
+  color: #fff;
+ }
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+      float: left;
+      width: 25%;
+  }
+
+  /* Right column */
+  .rightcolumn {
+      float: left;
+      width: 75%;
+      background-color: #f1f1f1;
+      padding-right: 20px;
+  }
+
+  /* Fake image */
+  .fakeimg {
+      background-color: #F1F1F1;
+      width: 100%;
+      padding: 20px;
+  }
+
+  /* Add a card effect for articles */
+  .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+      height: 60vh;
+      
+  }
+  .column img{
+    width: 100%;
+    height: 70%;
+  }
+  .column p{
+    padding: 5px;
+
+  }
+  .odk p{
+    font-size: 15px;
+
+  }
+  .leftlinks li a{
+    text-decoration: none;
+  }
+  .leftlinks li a:hover{
+    color: red;
+  }
+
+  /* footer */
+  .footer {
+      padding: 5px;
+      text-align: center;
+      background: #ddd;
+     
+  }
+  .footer{
+           background-color: #ccc;
+         
+  }
+  .footer ul li{
+    display: inline;
+      
+  }
+  .footer ul li img{
+    width: 120px;
+    margin: 5px;
+    opacity: 0.5;
+  }
+  .footer ul li img:hover{
+    opacity: 5;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {   
+          width: 100%;
+          padding: 0;
+      }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+      .topnav a {
+          float: none;
+          width: 100%;
+      }
+  }
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="logo/OMDTZ-logo.png" alt="OMDTZ-logo" class="OMDTZ-logo float-left" style ="width:95px;">
+     <p class="h1 nav justify-content-center" style = "margin-bottom: 5px; font-family:Lucida Consol;">OpenMap Development Tanzania</p>
+     <p class="h2 nav justify-content-center" style = "margin-bottom: 0px; font-family:Forte; font-size:25px;">"Community, Technology, Innovation"</p>
+</div>
+<video autoplay muted loop id="myVideo">
+   <source src="video/Gif maps.mp4" type="video/mp4">
+   Your browser does not support HTML5 video.<!-- if the browser used to display this page doesn't support html5,this message will be displayed-->
+</video>
+ 
+<div class="topnav" id="myTopnav">
+           <a  href="home.html">Home</a>
+           <a href="aboutUs.html">About US</a>
+           <a  href="project1.html">Projects</a>
+           <a class="active" href="training.html">Training, Workshop, Library</a>
+           <a href="Blogs.html">Blogs,News</a>
+           <a  href="Team.html">Team</a>
+           <a href="partners.html">Partner with us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+  
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+     <div class="card">
+          <h2>About Me</h2>
+          <div class="fakeimg">
+              <div class="fakeimg" style="height:5%;">
+                  <ul class="leftlinks">
+                      <li><a href="#" id="ls1">Kufanya kazi na wana jamii katika kukusanya taarifa kwenye maeneo yao.</a></li>
+                      <li><a href="#" id="ls2">Utengenezaji wa Ramani za Mitaro</a></li>
+                  </ul>
+          </div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+          <h3>Popular Post</h3>
+          <div class="fakeimg"><p>Image</p></div>
+          <div class="fakeimg"><p>Image</p></div>
+          <div class="fakeimg"><p>Image</p></div>
+        </div>
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div></div>
+  <div class="rightcolumn">
+       <div class="card" id="section-kufanya_kazi">
+         <h2>TITLE HEADING</h2>
+         <p>Mradi wa Data Zetu ni moja ya miradi inayolenga kuwapa uwezo viongozi na wadau mbalimbali wanaotumia taarfa kufanya maamuzi kwa ajili ya faida ya jamii yao hususani kuokoa maisha.
+         Katika kufanikisha hili mradi unawapa nafasi wanajamii kuhusika katika zoezi kuanzia kuchangia mada nini kinawasumbua na kinaitaji utatuzi, tatizo lipi lianze kutatuliwa kwenye jamii yao ili kuweze kuwanufaisha wao na wadau wanaoweza tatua tatizo hilo kwa kufanya maamuzi sahihi kuptia taarifa.
+         </p>
+         <h2>Kitu kilicho wafurahisha jamii katika zoezi zima la ukusanyaji wa taarifa</h2>
+         <p>Ukusanyaji wa taarifa mara nyingi huwa unawahusisha watu wenye taaluma kuhusiana na ukusanyaji wa taarifa. Hii imekuwa tofauti kwa HOT kwani imekuwa ikifanya kazi na wanajimii wenyewe kukusanya taarifa kwenye maeneo yao husika, kwa kutumia vifaa vyao wenywe (simu) na elimu ndogo ya ukusanyaji wa taarifa kutoka kwa timu ya HOT. Zoezi hili limefanikiwa kwa kiasi kikubwa sana kwa kuwa taarifa zote zilizokusanywa katika mradi huu zilikusanywa na wananchi kwa kushirikiana na viongozi wa mtaa na wanajamii wa eneo hilo.</p>
+         <div class="row">
+               <div class="column">
+                 <img src="picha/Picture1.png" alt="Snow">
+                  <p>Wanajamii wakikusanya taarifa</p>
+               </div>
+               <div class="column">
+                 <img src="picha/Picture2.png" alt="Forest">
+                  <p>Wanajamii wakikusanya taarifa</p>
+               </div>
+
+         </div>
+
+         <div class="maoni">
+           <h3>Maoni kutoka kwa wananchi walioshiriki zoezi la ukusanyaji wa taarifa.</h3>
+           <p><i>
+
+         “Nimejifunza teknologia mpya ambayo sikuweza kujua kama simu yangu inaweza kusaidia jamii yangu kuishi vizuri” Halima Juma- Mwananchi Makangarawe</i></p>
+
+         <p><i>
+         “Zoezi hili naomba liwe endelevu maana linawapa nafasi hususani vijana kushiriki kazi za maendeleo ya jamii yao”. Reah Mohamed- Mjumbe, serikali ya Mtaa Makangarawe</i></p>
+
+         <p><i>“Huu ni mtaa wangu nina uhakika nikienda kumuuliza maswali mwananchi mwenzangu tutapata majibu sahihi kwani watakuwa huru na anayewahoji kwani ni mmoja wa watu wanaomzunguka” Mohamed- Mwananchi, Mtaa wa Dovya</i></p>
+
+         </p></div>
+       </div>
+       <div class="card" id="section-mitaro">
+        
+         <h2>Nini kinafanyika katika mradi wa Ramani huria katika mitaro?</h2>
+       <p>Mradi wa Ramani Huria awamu ya pili (RH 2.0) unaendeleza kwa namna ya kipekee jitihada za kusaidia wanajamii kuwa wastahimilivu wa janga la mafuriko katika mkoa wa Dar es salaam. Mradi huu unahusika na ukusanyaji wa taarifa mbalimbali kama Makazi, Miundombinu, Athari za mafuriko na visababishi vyake. Taarifa zote hizi zinakusanywa na wanajamii pamoja na wanafuzi wa vyuo mbalimbali hususani chuo kikuu Ardhi kwa kutumia teknolojia ya kawaida kabisa kama simu ya mkononi (smartphone) na vifaa kama futi kamba, fimbo iliyo wekwa vipimo (measuring rods), tochi, na vioo (kuangalia mitaro iliyo funikwa). Taarifa hizi zinakusanywa kupitia programu ya mfumo wa simu (android) iliyowekwa programu ya Open Data Kit (ODK) iliyoboreshwa kwaajili ya kukusanya taarifa mbalimbali.
+   </p>
+   <div class="odk">
+           <img src="picha/Picture3.png" alt="picha ya timu wakiwa kazini" style="width:100%">
+            <p>Muonekano wa program
+   u ya ODK katika ukusanyaji wa taarifa na  Timu ya ukusanyaji taarifa wakiwa kazini
+   </p>
+         </div>
+   <div>
+         <p>Taarifa zote zinazohusiana na mitaro zinakusanywa katika zoezi hili na kutumwa katika mfumo maalumu kwaajili ya kusafishwa na kutumika katika maamuzi mbalimbali kama kutengeneza “model” ya mafuriko katika jiji la Dar es Salaam ambayo itaonyesha mwenendo wa maji endapo mvia itanyesha na wap mafuriko yatatokea kulingana na aina ya mitaro iliyopo.
+   Baadhi ya taarifa zinazokusanywa ni pamoja upana, urefu wa mtaro na vipimo vingine kama mwinuko kutoka usawa wa barabara (elevation), nyenzo zilizotumika kutengeneza mtaro (Materials), hali ya mtaro (drainage condition/smoothness) na taarifa nyingine nyingi. Pia aina nyingine ya taarifa ni sehemu zenye matatizo katika mitaro kama uchafu, sehemu zilizohariibika, mitaro iliyofukiwa na mengine mengi.
+   </p>
+   </div>
+     </div></div>
+</div>
+
+<div class="footer">
+  <ul>
+          <li><a href="https://www.hotosm.org"><img src="logo/HOTlogo.png"></a></li>
+          <li><a href="https://www.redcross.org"><img src="logo/red.png" ></a></li>
+          <li><a href="https://www.udsm.ac.tz"><img src="logo/UDSMlogo.png"></a></li>
+          <li><a href="https://opendata.go.tz"><img src="logo/todi.png"></a></li>
+          <li><a href="https://www.worldbank.org"><img src="logo/World_Bank_Group_logo.png"></a></li>
+          <li><a href="https://www.ifrc.org"><img src="logo/DanishRedCrossLogo-e1477391823548.png"></a></li>
+          <li><a href="https://www.darcity.net"><img src="logo/DarCityLogo.png"></a></li>
+          <li><a href="https://www.ifrc.org"><img src="logo/red-cross-logotz.png"></a>
+          <li><a href="https://www.aru.ac.tz/"><img src="logo/Ardhi_university_Logo.png"></a></li> 
+          </li>
+        </ul>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $("#section-mitaro").hide();
+    $("#ls1").css("font-weight","bold");
+    $("#ls1").click(function(){
+     $("#ls1").css("font-weight","bold");
+     $("#section-mitaro").hide();
+     $("#section-kufanya_kazi").show();
+     $("#ls2").css("font-weight","normal");
+    });
+    $("#ls2").click(function(){
+     $("#ls2").css("font-weight","bold");
+     $("#section-kufanya_kazi").hide();
+     $("#section-mitaro").show();
+     $("#ls1").css("font-weight","normal");
+    });
+  });
+</script>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>
